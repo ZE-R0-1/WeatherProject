@@ -101,19 +101,19 @@ extension WeatherDataSource {
     }
     
     private func fetchCurrentWeather(cityName: String, completion: @escaping (Result<CurrentWeather, Error>) -> ()) {
-        let urlStr = "http://"
+        let urlStr = "http://api.openweathermap.org/data/2.5/forecast?q=\(cityName)&appid=\(apiKey)&units=metric&lang=kr"
         
         fetch(urlStr: urlStr, completion: completion)
     }
 
     private func fetchCurrentWeather(cityId: Int, completion: @escaping (Result<CurrentWeather, Error>) -> ()) {
-        let urlStr = "http://"
+        let urlStr = "http://api.openweathermap.org/data/2.5/forecast?q=\(cityId)&appid=\(apiKey)&units=metric&lang=kr"
         
         fetch(urlStr: urlStr, completion: completion)
     }
 
     private func fetchCurrentWeather(location: CLLocation, completion: @escaping (Result<CurrentWeather, Error>) -> ()) {
-        let urlStr = "http://"
+        let urlStr = "http://api.openweathermap.org/data/2.5/forecast?lat=\(location.coordinate.latitude)&lon=\(location.coordinate.longitude)&appid=\(apiKey)&units=metric&lang=kr"
         
         fetch(urlStr: urlStr, completion: completion)
     }
