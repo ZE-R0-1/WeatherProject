@@ -30,6 +30,7 @@
 		CA5F55DF2A529EF50066CDCA /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		CA5F55E22A52A5880066CDCA /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
 		CA5F55E42A52A5AC0066CDCA /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
+		CA5F55E72A52ACD60066CDCA /* CurrentWeatherApi.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CurrentWeatherApi.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 		CA5F55CA2A529EBF0066CDCA /* WeatherPro */ = {
 			isa = PBXGroup;
 			children = (
+				CA5F55E62A52ACBB0066CDCA /* Api */,
 				CA5F55E12A52A5650066CDCA /* Cell */,
 				CA5F55CB2A529EBF0066CDCA /* AppDelegate.swift */,
 				CA5F55CD2A529EBF0066CDCA /* SceneDelegate.swift */,
@@ -82,6 +84,14 @@
 				CA5F55E42A52A5AC0066CDCA /* ForecastTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		CA5F55E62A52ACBB0066CDCA /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F55E72A52ACD60066CDCA /* CurrentWeatherApi.playground */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
