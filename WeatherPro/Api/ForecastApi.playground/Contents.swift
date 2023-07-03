@@ -1,25 +1,29 @@
 import UIKit
 import CoreLocation
 
-struct CurrentWeather: Codable {
-    let dt: Int
+struct Forecast: Codable {
+    let cod: String
+    let message: Int
+    let cnt: Int
     
-    struct Weather: Codable {
-        let id: Int
-        let main: String
-        let description: String
-        let icon: String
+    struct ListItem: Codable {
+        let dt: Int
+        
+        struct Main: Codable {
+            let temp: Double
+        }
+        
+        let main: Main
+        
+        struct Weather: Codable {
+            let description: String
+            let icon: String
+        }
+        
+        let weather: [Weather]
     }
     
-    let weather: [Weather]
-    
-    struct Main: Codable {
-        let temp: Double
-        let temp_min: Double
-        let temp_max: Double
-    }
-    
-    let main: Main
+    let list: [ListItem]
 }
 
 enum ApiError: Error {
@@ -76,27 +80,27 @@ func fetch<ParsingType: Codable>(urlStr: String, completion: @escaping (Result<P
     task.resume()
 }
 
-func fetchCurrentWeather(cityName: String, completion: @escaping (Result<CurrentWeather, Error>) -> ()) {
-    let urlStr = "http://"
+func fetchForecast(cityName: String, completion: @escaping (Result<Forecast, Error>) -> ()) {
+    let urlStr = "http://api.openweathermap.org/data/2.5/forecast?q=\(cityName)&appid=7746ce3f8f72cbb419f4ef93a6ff5bb3&units=metric&lang=kr"
     
     fetch(urlStr: urlStr, completion: completion)
 }
 
-func fetchCurrentWeather(cityId: Int, completion: @escaping (Result<CurrentWeather, Error>) -> ()) {
-    let urlStr = "http://"
+func fetchForecast(cityId: Int, completion: @escaping (Result<Forecast, Error>) -> ()) {
+    let urlStr = "http://api.openweathermap.org/data/2.5/forecast?q=\(cityId)&appid=7746ce3f8f72cbb419f4ef93a6ff5bb3&units=metric&lang=kr"
     
     fetch(urlStr: urlStr, completion: completion)
 }
 
-func fetchCurrentWeather(location: CLLocation, completion: @escaping (Result<CurrentWeather, Error>) -> ()) {
-    let urlStr = "http://"
+func fetchForecast(location: CLLocation, completion: @escaping (Result<Forecast, Error>) -> ()) {
+    let urlStr = "http://api.openweathermap.org/data/2.5/forecast?lat=\(location.coordinate.latitude)&lon=\(location.coordinate.longitude)&appid=7746ce3f8f72cbb419f4ef93a6ff5bb3&units=metric&lang=kr"
     
     fetch(urlStr: urlStr, completion: completion)
 }
 
-//fetchCurrentWeather(cityName: "seoul") { _ in }
+//fetchForecast(cityName: "seoul") { _ in }
 //
-//fetchCurrentWeather(cityId: 1835847) { (result) in
+//fetchForecast(cityId: 1835847) { (result) in
 //    switch result {
 //    case .success(let weather):
 //        dump(weather)
@@ -106,7 +110,7 @@ func fetchCurrentWeather(location: CLLocation, completion: @escaping (Result<Cur
 //}
 
 let location = CLLocation(latitude: 37.498206, longitude: 127.02761)
-fetchCurrentWeather(location: location) { (result) in
+fetchForecast(location: location) { (result) in
     switch result {
     case .success(let weather):
         dump(weather)
