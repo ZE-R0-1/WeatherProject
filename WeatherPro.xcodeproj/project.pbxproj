@@ -21,6 +21,7 @@
 		CA5F55EF2A52F0030066CDCA /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F55EE2A52F0030066CDCA /* Forecast.swift */; };
 		CA5F55F22A52F03F0066CDCA /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F55F12A52F03F0066CDCA /* WeatherDataSource.swift */; };
 		CA5F55F52A5301840066CDCA /* Double+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F55F42A5301840066CDCA /* Double+Formatter.swift */; };
+		CA5F55F72A53093B0066CDCA /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F55F62A53093B0066CDCA /* Date+Formatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CA5F55EE2A52F0030066CDCA /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		CA5F55F12A52F03F0066CDCA /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
 		CA5F55F42A5301840066CDCA /* Double+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Formatter.swift"; sourceTree = "<group>"; };
+		CA5F55F62A53093B0066CDCA /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				CA5F55F42A5301840066CDCA /* Double+Formatter.swift */,
+				CA5F55F62A53093B0066CDCA /* Date+Formatter.swift */,
 			);
 			path = Formatter;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				CA5F55E52A52A5AC0066CDCA /* ForecastTableViewCell.swift in Sources */,
 				CA5F55ED2A52EFE40066CDCA /* CurrentWeather.swift in Sources */,
 				CA5F55F52A5301840066CDCA /* Double+Formatter.swift in Sources */,
+				CA5F55F72A53093B0066CDCA /* Date+Formatter.swift in Sources */,
 				CA5F55E02A529EF50066CDCA /* Common.swift in Sources */,
 				CA5F55EF2A52F0030066CDCA /* Forecast.swift in Sources */,
 				CA5F55D02A529EBF0066CDCA /* ViewController.swift in Sources */,

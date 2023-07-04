@@ -111,22 +111,22 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygy-ip-Qt4">
-                                                    <rect key="frame" x="325.33333333333331" y="21" width="47.666666666666686" height="38"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                    <rect key="frame" x="337" y="21" width="36" height="38"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwD-u0-Dyd">
-                                                    <rect key="frame" x="244.33333333333337" y="22" width="71" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <rect key="frame" x="270.33333333333331" y="25.666666666666664" width="56.666666666666686" height="28.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HNS-5h-HCU">
-                                                    <rect key="frame" x="194.33333333333334" y="20" width="40" height="40"/>
+                                                    <rect key="frame" x="230.33333333333334" y="25" width="30.000000000000028" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="aUd-1Q-9sU"/>
-                                                        <constraint firstAttribute="height" constant="40" id="hXs-GT-zkb"/>
+                                                        <constraint firstAttribute="width" constant="30" id="aUd-1Q-9sU"/>
+                                                        <constraint firstAttribute="height" constant="30" id="hXs-GT-zkb"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAz-RV-ecL">
