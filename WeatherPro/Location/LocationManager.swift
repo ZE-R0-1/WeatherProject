@@ -21,6 +21,8 @@ class LocationManager: NSObject {
     
     let manager: CLLocationManager
     
+    var currentLocationTitle: String?
+    
     func updateLocation() {
         let status: CLAuthorizationStatus
         
@@ -53,6 +55,27 @@ extension LocationManager: CLLocationManagerDelegate {
         manager.requestLocation()
     }
     
+    private func updateAddress(from location: CLLocation) {
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location) { [weak self](placmarks, error) in
+            if let error = error {
+                print(error)
+                self?.currentLocationTitle = "Unknown"
+                return
+            }
+            
+            if let placmark = placmarks?.first {
+                if let gu = placmark.locality, let dong = placmark.subLocality {
+                    self?.currentLocationTitle = "\(gu) \(dong)"
+                } else {
+                    self?.currentLocationTitle = placmark.name ?? "Unknown"
+                }
+            }
+            
+            print(self?.currentLocationTitle)
+        }
+    }
+    
     @available(iOS 14.0, *)
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         switch manager.authorizationStatus {
@@ -78,7 +101,11 @@ extension LocationManager: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locations.last)
+        //print(locations.last)
+        
+        if let location = locations.last {
+            updateAddress(from: location)
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
