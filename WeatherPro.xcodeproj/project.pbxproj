@@ -22,6 +22,7 @@
 		CA5F55F22A52F03F0066CDCA /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F55F12A52F03F0066CDCA /* WeatherDataSource.swift */; };
 		CA5F55F52A5301840066CDCA /* Double+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F55F42A5301840066CDCA /* Double+Formatter.swift */; };
 		CA5F55F72A53093B0066CDCA /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F55F62A53093B0066CDCA /* Date+Formatter.swift */; };
+		CA5F55FA2A53F2C10066CDCA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F55F92A53F2C10066CDCA /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		CA5F55F12A52F03F0066CDCA /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
 		CA5F55F42A5301840066CDCA /* Double+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Formatter.swift"; sourceTree = "<group>"; };
 		CA5F55F62A53093B0066CDCA /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
+		CA5F55F92A53F2C10066CDCA /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		CA5F55CA2A529EBF0066CDCA /* WeatherPro */ = {
 			isa = PBXGroup;
 			children = (
+				CA5F55F82A53F2B00066CDCA /* Location */,
 				CA5F55F32A5301630066CDCA /* Formatter */,
 				CA5F55F02A52F02E0066CDCA /* Data */,
 				CA5F55E92A52EEE90066CDCA /* Model */,
@@ -136,6 +139,14 @@
 				CA5F55F62A53093B0066CDCA /* Date+Formatter.swift */,
 			);
 			path = Formatter;
+			sourceTree = "<group>";
+		};
+		CA5F55F82A53F2B00066CDCA /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F55F92A53F2C10066CDCA /* LocationManager.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +232,7 @@
 				CA5F55F22A52F03F0066CDCA /* WeatherDataSource.swift in Sources */,
 				CA5F55E32A52A5880066CDCA /* SummaryTableViewCell.swift in Sources */,
 				CA5F55CE2A529EBF0066CDCA /* SceneDelegate.swift in Sources */,
+				CA5F55FA2A53F2C10066CDCA /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
