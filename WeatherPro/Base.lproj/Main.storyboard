@@ -171,6 +171,10 @@
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="CvX-hz-aV0"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Tae-Lj-seD">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -179,6 +183,7 @@
                             <constraint firstItem="rJK-pJ-Qzz" firstAttribute="height" secondItem="yf6-Tf-VDv" secondAttribute="height" id="7QX-6t-cJ9"/>
                             <constraint firstItem="rJK-pJ-Qzz" firstAttribute="centerX" secondItem="yf6-Tf-VDv" secondAttribute="centerX" id="DEX-dh-H9h"/>
                             <constraint firstAttribute="bottom" secondItem="yf6-Tf-VDv" secondAttribute="bottom" id="EcH-Qc-YHq"/>
+                            <constraint firstItem="Tae-Lj-seD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FUN-8c-Du7"/>
                             <constraint firstItem="rJK-pJ-Qzz" firstAttribute="width" secondItem="yf6-Tf-VDv" secondAttribute="width" id="L2U-83-mDt"/>
                             <constraint firstItem="GCn-hk-v0r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MMi-m8-1li"/>
                             <constraint firstItem="GCn-hk-v0r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P8f-u8-jNG"/>
@@ -187,6 +192,7 @@
                             <constraint firstAttribute="trailing" secondItem="yf6-Tf-VDv" secondAttribute="trailing" id="Xi3-2l-sxN"/>
                             <constraint firstItem="oBu-Em-mM7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dvW-Kw-Ycz"/>
                             <constraint firstItem="yf6-Tf-VDv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fIN-Hl-LIl"/>
+                            <constraint firstItem="Tae-Lj-seD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jbM-2K-1eS"/>
                             <constraint firstItem="yf6-Tf-VDv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kpL-pw-YTv"/>
                             <constraint firstItem="rJK-pJ-Qzz" firstAttribute="centerY" secondItem="yf6-Tf-VDv" secondAttribute="centerY" id="mbb-bk-hY8"/>
                             <constraint firstItem="oBu-Em-mM7" firstAttribute="top" secondItem="GCn-hk-v0r" secondAttribute="bottom" id="xZu-sh-HQL"/>
@@ -194,6 +200,7 @@
                     </view>
                     <connections>
                         <outlet property="listTableView" destination="oBu-Em-mM7" id="atR-RT-z3g"/>
+                        <outlet property="loader" destination="Tae-Lj-seD" id="Qyn-H7-ndi"/>
                         <outlet property="locationLabel" destination="lFE-kU-vTC" id="lnD-vW-I1b"/>
                     </connections>
                 </viewController>
